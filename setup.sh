@@ -11,6 +11,7 @@ ui_print() { echo -e "ui_print $1\nui_print" > $OUTFD; }
 # Copy files
 ui_print "Copying device adaptation files...";
 cp -r sfos/* $SFOS/;
+rm -rf $SFOS/odm;
 
 ui_print "Copying firmware images";
 mkdir $FIRMWARE;
